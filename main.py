@@ -76,7 +76,7 @@ def Crear_Matriz(id):
 
 
 def Periodos_Auto(matriz,inicio,periodo):
-    Contador_Periodos+=1
+    
     for s in range(periodo-inicio):
         Nuevo_periodo(matriz)
                                 
@@ -412,11 +412,14 @@ while Menu:
                                 Matriz=NULL
 
                             elif opcion==1:
+                                print("1 periodo avanzado")
                                 Contador_Periodos+=1
                                 Nuevo_periodo(Matriz)
                             elif opcion==2:
+                                print("Realizando investigación")
                                 
                                 Periodos_Auto(Matriz,Contador_Periodos, periodo)
+                                Contador_Periodos=periodo
                             elif opcion==3:
                                 Graficar(Matriz,paciente)
         else:
